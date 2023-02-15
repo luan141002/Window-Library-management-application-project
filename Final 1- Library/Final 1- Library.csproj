@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D97C02B-F709-4330-B4E7-201BE7F33F05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Final_1__Library</RootNamespace>
+    <AssemblyName>Final 1- Library</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AUTHOR.cs">
+      <DependentUpon>QuanLyThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BOOK.cs">
+      <DependentUpon>QuanLyThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Borrow_Book.cs">
+      <DependentUpon>QuanLyThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLASSES\Accountant.cs" />
+    <Compile Include="CLASSES\BL_Author.cs" />
+    <Compile Include="CLASSES\BL_Book.cs" />
+    <Compile Include="CLASSES\BL_BorrowedBook.cs" />
+    <Compile Include="CLASSES\BL_Employee.cs" />
+    <Compile Include="CLASSES\BL_Publisher.cs" />
+    <Compile Include="CLASSES\BL_Reader.cs" />
+    <Compile Include="CLASSES\BL_User.cs" />
+    <Compile Include="CLASSES\Cashier.cs" />
+    <Compile Include="CLASSES\Guard.cs" />
+    <Compile Include="DataSetBOOK.cs">
+      <DependentUpon>DataSetBOOK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetBOOK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetBOOK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYEE.cs">
+      <DependentUpon>QuanLyThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Book-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Book-Form.Designer.cs">
+      <DependentUpon>Book-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Dashboard-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Dashboard-Form.Designer.cs">
+      <DependentUpon>Dashboard-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Employee-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Employee-Form.Designer.cs">
+      <DependentUpon>Employee-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\BorrowBook-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\BorrowBook-Form.Designer.cs">
+      <DependentUpon>BorrowBook-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Login-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Login-Form.Designer.cs">
+      <DependentUpon>Login-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\ManageAuthor-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\ManageAuthor-Form.Designer.cs">
+      <DependentUpon>ManageAuthor-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Publisher-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Publisher-Form.Designer.cs">
+      <DependentUpon>Publisher-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\Reader-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Reader-Form.Designer.cs">
+      <DependentUpon>Reader-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\SignUp-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\SignUp-Form.Designer.cs">
+      <DependentUpon>SignUp-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="library1010DataSet.cs">
+      <DependentUpon>library1010DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="library1010DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>library1010DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="library1012DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>library1012DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="library1012DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>library1012DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="library1012DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>library1012DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="library3DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>library3DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="library3DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>library3DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="library3DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>library3DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PUBLISHER.cs">
+      <DependentUpon>QuanLyThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLBrBook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBrBook.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV.cs">
+      <DependentUpon>QLNV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\EmSaRecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\EmSaRecs.Designer.cs">
+      <DependentUpon>EmSaRecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuVien.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVien.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuVien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVien.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="READER.cs">
+      <DependentUpon>QuanLyThuVien.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Form.Designer.cs">
+      <DependentUpon>Report_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="USER.cs">
+      <DependentUpon>QuanLyThuVien.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Borrowed_book.rdlc" />
+    <EmbeddedResource Include="EMPLOYEE.rdlc" />
+    <EmbeddedResource Include="FORMS\Book-Form.resx">
+      <DependentUpon>Book-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Dashboard-Form.resx">
+      <DependentUpon>Dashboard-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Employee-Form.resx">
+      <DependentUpon>Employee-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\BorrowBook-Form.resx">
+      <DependentUpon>BorrowBook-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Login-Form.resx">
+      <DependentUpon>Login-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\ManageAuthor-Form.resx">
+      <DependentUpon>ManageAuthor-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Publisher-Form.resx">
+      <DependentUpon>Publisher-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Reader-Form.resx">
+      <DependentUpon>Reader-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\SignUp-Form.resx">
+      <DependentUpon>SignUp-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FORMS\EmSaRecs.resx">
+      <DependentUpon>EmSaRecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form.resx">
+      <DependentUpon>Report_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="DataSetBOOK.xsc">
+      <DependentUpon>DataSetBOOK.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBOOK.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetBOOK.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetBOOK.xss">
+      <DependentUpon>DataSetBOOK.xsd</DependentUpon>
+    </None>
+    <None Include="library1010DataSet.xsc">
+      <DependentUpon>library1010DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="library1010DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>library1010DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="library1010DataSet.xss">
+      <DependentUpon>library1010DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="library1012DataSet1.xsc">
+      <DependentUpon>library1012DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="library1012DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>library1012DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="library1012DataSet1.xss">
+      <DependentUpon>library1012DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="library1012DataSet11.xsc">
+      <DependentUpon>library1012DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="library1012DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>library1012DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="library1012DataSet11.xss">
+      <DependentUpon>library1012DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="library1012DataSet2.xsc">
+      <DependentUpon>library1012DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="library1012DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>library1012DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="library1012DataSet2.xss">
+      <DependentUpon>library1012DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="library3DataSet.xsc">
+      <DependentUpon>library3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="library3DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>library3DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="library3DataSet.xss">
+      <DependentUpon>library3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="library3DataSet1.xsc">
+      <DependentUpon>library3DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="library3DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>library3DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="library3DataSet1.xss">
+      <DependentUpon>library3DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="library3DataSet2.xsc">
+      <DependentUpon>library3DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="library3DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>library3DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="library3DataSet2.xss">
+      <DependentUpon>library3DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLBrBook.xsc">
+      <DependentUpon>QLBrBook.xsd</DependentUpon>
+    </None>
+    <None Include="QLBrBook.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBrBook.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QLBrBook.xss">
+      <DependentUpon>QLBrBook.xsd</DependentUpon>
+    </None>
+    <None Include="QLNV.xsc">
+      <DependentUpon>QLNV.xsd</DependentUpon>
+    </None>
+    <None Include="QLNV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QLNV.xss">
+      <DependentUpon>QLNV.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="QuanLyThuVien.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyThuVien.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuanLyThuVien.edmx.diagram">
+      <DependentUpon>QuanLyThuVien.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMAGES\add-file.png" />
+    <Content Include="IMAGES\Author_button_official.png" />
+    <Content Include="IMAGES\back.png" />
+    <Content Include="IMAGES\bookshelf.png" />
+    <Content Include="IMAGES\dustbin.png" />
+    <Content Include="IMAGES\edit.png" />
+    <Content Include="IMAGES\editor.png" />
+    <Content Include="IMAGES\Employee_button - Copy.png" />
+    <Content Include="IMAGES\floppy-disk.png" />
+    <Content Include="IMAGES\Genre_background.png" />
+    <Content Include="IMAGES\book2.png" />
+    <Content Include="IMAGES\book_button_official.png" />
+    <Content Include="IMAGES\Circulation_button_official.png" />
+    <Content Include="IMAGES\Employee_button.png" />
+    <Content Include="IMAGES\Genres_button_official.png" />
+    <Content Include="IMAGES\history.png" />
+    <None Include="IMAGES\picture.png" />
+    <Content Include="IMAGES\printer.png" />
+    <Content Include="IMAGES\printer2.png" />
+    <Content Include="IMAGES\publishing.png" />
+    <Content Include="IMAGES\reading.png" />
+    <Content Include="IMAGES\user.png" />
+    <Content Include="IMAGES\Pass.png" />
+    <Content Include="IMAGES\user_button_official.png" />
+    <Content Include="QuanLyThuVien.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyThuVien.edmx</DependentUpon>
+      <LastGenOutput>QuanLyThuVien.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QuanLyThuVien.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyThuVien.edmx</DependentUpon>
+      <LastGenOutput>QuanLyThuVien.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

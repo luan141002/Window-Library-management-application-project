@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c681dc63c0fd40a0825aa5306d11568d" Name="Diagram1">
+        <EntityTypeShape EntityType="library1012Model.AUTHOR" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="library1012Model.BOOK" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="library1012Model.Borrow_Book" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="library1012Model.EMPLOYEE" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="library1012Model.PUBLISHER" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="library1012Model.READER" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="library1012Model.USER" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="library1012Model.FK__BOOKS__ID_author__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="library1012Model.FK__BOOKS__ID_publis__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="library1012Model.FK__Borrow_Bo__ID_Bo__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="library1012Model.FK__Borrow_Bo__ID_Rd__31EC6D26" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
